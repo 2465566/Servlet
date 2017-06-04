@@ -17,7 +17,6 @@ public class HelloForm extends HttpServlet {
      */
     public HelloForm() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
     /**
@@ -46,7 +45,7 @@ public class HelloForm extends HttpServlet {
                 + name + "\n" +
                 "  <li><b>网址</b>："
 //                + request.getParameter("url") + "\n" +
-                + url  + "\n" +                      // TODO: 6/4/17 get init param from web.xml
+                + url  + "\n" +                      // TODO: 6/4/17 get init param url from web.xml
                 "</ul>\n" +
                 "</body></html>");
     }
