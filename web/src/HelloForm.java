@@ -30,7 +30,11 @@ public class HelloForm extends HttpServlet {
         PrintWriter out = response.getWriter();
         String title = "使用 GET 方法读取表单数据";
         // 处理中文
-        String name =new String(request.getParameter("name").getBytes("ISO8859-1"),"UTF-8");
+//        String name =new String(request.getParameter("name").getBytes("ISO8859-1"),"UTF-8");
+
+        String name =this.getInitParameter("name");  // TODO: 6/4/17 get init param from web.xml
+        String url = this.getInitParameter("url");
+
         String docType = "<!DOCTYPE html> \n";
         out.println(docType +
                 "<html>\n" +
@@ -41,7 +45,8 @@ public class HelloForm extends HttpServlet {
                 "  <li><b>站点名</b>："
                 + name + "\n" +
                 "  <li><b>网址</b>："
-                + request.getParameter("url") + "\n" +
+//                + request.getParameter("url") + "\n" +
+                + url  + "\n" +                      // TODO: 6/4/17 get init param from web.xml
                 "</ul>\n" +
                 "</body></html>");
     }
