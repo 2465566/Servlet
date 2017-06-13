@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: rico
-  Date: 6/4/17
-  Time: 11:00 AM
+  Date: 6/13/17
+  Time: 10:42 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-Welcome page
+  不能删除或者修改别的帖子   <a href='list_notes.jsp'>返回</a>
 </body>
 </html>

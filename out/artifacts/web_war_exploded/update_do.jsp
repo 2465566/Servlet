@@ -23,7 +23,7 @@
             String DBDRIVER = "com.mysql.jdbc.Driver";
             String DBURL = "jdbc:mysql://localhost:3306/db_jsp?characterEncoding=utf-8";
             String DBUSER = "root";
-            String DBPASSWORD = "root";
+            String DBPASSWORD = "3049";
             Connection conn = null;
             PreparedStatement pstmt = null;
         %>

@@ -43,7 +43,7 @@
         <%
         } else {
             // 用户未登陆，提示用户登陆，并跳转
-            response.setHeader("refresh", "2;URL=login.jsp");
+            response.setHeader("refresh", "1;URL=login.jsp");
         %>
         您还未登陆，请先登陆！！！<br>
         两秒后自动跳转到登陆窗口！！！<br>

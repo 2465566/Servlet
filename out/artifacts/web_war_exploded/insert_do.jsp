@@ -4,7 +4,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="style/css.css"/>
+        <link rel="stylesheet" type="text/css"/>
         <title>JSP+JDBC 留言管理程序――登陆</title>
     </head>
     <body>
@@ -58,21 +58,22 @@
             }
         %>
         <%
-            response.setHeader("refresh", "2;URL=list_notes.jsp");
-            if (flag) {
+            response.setHeader("refresh", "0;URL=list_notes.jsp");
         %>
-        留言添加成功，两秒后跳转到留言列表页！！！<br>
-        如果没有跳转，请按<a href="list_notes.jsp">这里</a>！！！
-        <hr>
-        <%
-        } else {
-        %>
-        留言添加失败，两秒后跳转到留言列表页！！！<br>
-        如果没有跳转，请按<a href="list_notes.jsp">这里</a>！！！
-        <hr>
-        <%
-            }
-        %>
+            <%--if (flag) {--%>
+        <%--%>--%>
+        <%--&lt;%&ndash;留言添加成功，两秒后跳转到留言列表页！！！<br>&ndash;%&gt;--%>
+        <%--&lt;%&ndash;如果没有跳转，请按<a href="list_notes.jsp">这里</a>！！！&ndash;%&gt;--%>
+        <%--<hr>--%>
+        <%--<%--%>
+        <%--} else {--%>
+        <%--%>--%>
+        <%--留言添加失败，两秒后跳转到留言列表页！！！<br>--%>
+        <%--如果没有跳转，请按<a href="list_notes.jsp">这里</a>！！！--%>
+        <%--<hr>--%>
+        <%--<%--%>
+            <%--}--%>
+        <%--%>--%>
         <%
         } else {
             // 用户未登陆，提示用户登陆，并跳转
