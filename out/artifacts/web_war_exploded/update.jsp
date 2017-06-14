@@ -104,7 +104,6 @@
     <h3><a href="list_notes.jsp">回到留言列表页</a></h3>
     <%
     } else {
-        // 用户未登陆，提示用户登陆，并跳转
         response.setHeader("refresh", "2;URL=login.jsp");
     %>
     您还未登陆，请先登陆！！！<br>

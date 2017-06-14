@@ -5,13 +5,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css"/>
-        <title>JSP+JDBC 留言管理程序――登陆</title>
+        <title>留言</title>
     </head>
     <body>
     <center>
-        <h1>留言管理范例 ―― JSP + JDBC实现</h1>
-        <hr>
-        <br>
         <%
             // 进行乱码处理
             request.setCharacterEncoding("UTF-8");

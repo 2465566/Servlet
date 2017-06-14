@@ -3,13 +3,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="style/css.css"/>
-        <title>JSP+JDBC 留言管理程序――登陆</title>
+        <title>留言</title>
     </head>
     <body>
     <center>
-        <h1>留言管理范例 ―― JSP + JDBC实现-download by http://www.codefans.net</h1>
-        <hr>
-        <br>
         <%
             if (session.getAttribute("uname") != null) {
                         // 用户已登陆

@@ -47,7 +47,6 @@
             stmt.close();
             conn.close();
 
-            flag = true;
         } catch (Exception e) {
             System.out.println("error when connect to sql：" + e.getMessage());
         }
