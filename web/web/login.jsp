@@ -10,7 +10,7 @@
         <form name="frmLogin" action="loginHandler.jsp" method="post" >
             <table width="50%">
                 <tr>
-                    <td colspan="2"><STRONG style="color:red;font-size:30px;">　　　　用户登陆</STRONG></td>
+                    <td colspan="2"><STRONG style="color:red;font-size:30px;">登陆</STRONG></td>
                 </tr>
                 <tr>
                     <td>用户名：</td>
