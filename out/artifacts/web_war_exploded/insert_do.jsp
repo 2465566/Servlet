@@ -1,26 +1,24 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
-<%@ page import="java.sql.*"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<jsp:useBean class="uu.NoteList" id="noteList" scope="application"/>
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css"/>
-        <title>留言</title>
-    </head>
-    <body>
-    <center>
-        <%!
-            int i = 0;
-        %>
-        <%
-            request.setCharacterEncoding("UTF-8");
-            String note = request.getParameter("content");
-            i = i+1;
-            application.setAttribute(session.getAttribute("id") + "note_" + i, note);
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css"/>
+    <title>留言</title>
+</head>
+<body>
+<center>
+    <jsp:getProperty name="noteList" property="map"/>
+    <%
+        request.setCharacterEncoding("UTF-8");
+        String id = (String) session.getAttribute("id");
+        request.setAttribute("id", id);
+        noteList.processRequest(request);
 
-            response.setHeader("refresh", "1;URL=list_notes.jsp");
-        %>
-        <hr>
-    </center>
+        response.setHeader("refresh", "1;URL=list_notes.jsp");
+    %>
+    <hr>
+</center>
 </body>
 </html>
