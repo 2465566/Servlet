@@ -13,7 +13,14 @@
 
         String id = request.getParameter("id");
         String password = request.getParameter("password");
+
+        if(id.isEmpty() || password.isEmpty()) {
+            response.sendRedirect("login.jsp");
+            return;
+        }
+
     %>
+    
     <jsp:getProperty name="register" property="map"/>
     <jsp:getProperty name="register" property="id"/>
     <%

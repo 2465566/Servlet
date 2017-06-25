@@ -2,6 +2,7 @@
 <%@ page import="java.util.HashMap" %>
 <%@ page import="java.util.Set" %>
 <jsp:useBean class="uu.NoteList" id="noteList" scope="application"/>
+<jsp:useBean class="uu.Register" id="register" scope="application"/>
 
 <html>
 <head>
@@ -17,9 +18,17 @@
         request.setCharacterEncoding("UTF-8");
     %>
 
+
+
     <jsp:setProperty name="noteList" property="map"/>
+    <jsp:setProperty name="register" property="id"/>
+    <jsp:setProperty name="register" property="psw"/>
 
     <%
+        if (session.getAttribute("id") == null || session.getAttribute("psw") == null
+        || !session.getAttribute("psw").equals(register.getMap().get(session.getAttribute("id")))) {
+            response.sendRedirect("login.jsp");
+    }
         HashMap<String, String> list = noteList.getMap();
         Set<String> key = list.keySet();
         for (String note : key) {

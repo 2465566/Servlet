@@ -19,6 +19,10 @@
         request.setCharacterEncoding("UTF-8");
         String id = request.getParameter("id");
         String psw = request.getParameter("psw");
+
+        if(id.isEmpty()|| psw.isEmpty()) {
+            response.sendRedirect("register.jsp");
+        }
     %>
     <jsp:setProperty name="register" property="id"/>
     <jsp:setProperty name="register" property="psw"/>
