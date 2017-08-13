@@ -1,8 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-<jsp:useBean class="uu.NoteList" id="noteList" scope="application"/>
+<%@ page contentType="text/html;charset=GBK" %>
+<jsp:useBean class="bean.NoteList" id="noteList" scope="application"/>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
     <link rel="stylesheet" type="text/css" href="style/css.css"/>
     <title>update</title>
 </head>
@@ -10,28 +10,30 @@
 <center>
     <jsp:setProperty name="noteList" property="map"/>
     <%
+        request.setCharacterEncoding("GBK");
         String userName = (String) session.getAttribute("id");
         String note = request.getParameter("note");
+        note = new String(note.getBytes("ISO8859_1"), "GBK");
         String oldNote = note;// TODO: 6/17/17 why can not add here 
         String noteId = noteList.getMap().get(note);
         if (userName.equals(noteId)) {
     %>
 
-    <form action="update_do.jsp" method="post">
+    <form action="updateHandler.jsp" method="post">
         <table>
             <tr>
-                <td colspan="2">æ·»åŠ æ–°ç•™è¨€</td>
+                <td colspan="2">Ìí¼ÓÐÂÁôÑÔ</td>
             </tr>
             <tr>
-                <td>å†…å®¹ï¼š</td>
+                <td>ÄÚÈÝ£º</td>
                 <td><textarea name="content" cols="30" rows="6"><%=note%></textarea></td>
             </tr>
             <tr>
                 <td colspan="2">
                     <input type="hidden" name="noteId" value="<%=noteId%>">
                     <input type="hidden" name="oldNote" value="<%=oldNote%>">
-                    <input type="submit" value="æ›´æ–°">
-                    <input type="reset" value="é‡ç½®">
+                    <input type="submit" value="¸üÐÂ">
+                    <input type="reset" value="ÖØÖÃ">
                 </td>
             </tr>
         </table>

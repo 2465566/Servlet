@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-  不能删除或者修改别的帖子   <a href='list_notes.jsp'>返回</a>
+  不能删除或者修改别的帖子   <a href='notesList.jsp'>返回</a>
 </body>
 </html>

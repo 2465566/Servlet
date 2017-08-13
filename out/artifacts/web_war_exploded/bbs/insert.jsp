@@ -1,31 +1,31 @@
-<%@ page contentType="text/html;charset=UTF-8"%>
+<%@ page contentType="text/html;charset=GBK"%>
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
         <link rel="stylesheet" type="text/css" href="style/css.css"/>
-        <title>ç•™è¨€</title>
+        <title>ÁôÑÔ</title>
     </head>
     <body>
     <center>
-        <form action="insert_do.jsp" method="post">
+        <form action="insertHandler.jsp" method="post">
             <table>
                 <tr>
-                    <td colspan="2">æ·»åŠ æ–°ç•™è¨€</td>
+                    <td colspan="2">Ìí¼ÓÐÂÁôÑÔ</td>
                 </tr>
                 <tr>
                 <tr>
-                    <td>å†…å®¹ï¼š</td>
+                    <td>ÄÚÈÝ£º</td>
                     <td><textarea name="content" cols="30" rows="6"></textarea></td>
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <input type="submit" value="æ·»åŠ ">
-                        <input type="reset" value="é‡ç½®">
+                        <input type="submit" value="Ìí¼Ó">
+                        <input type="reset" value="ÖØÖÃ">
                     </td>
                 </tr>
             </table>
         </form>
-        <h3><a href="list_notes.jsp">å›žåˆ°ç•™è¨€åˆ—è¡¨é¡µ</a></h3>
+        <h3><a href="notesList.jsp">»Øµ½ÁôÑÔÁÐ±íÒ³</a></h3>
     </center>
 </body>
 </html>

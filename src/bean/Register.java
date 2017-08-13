@@ -1,4 +1,4 @@
-package uu;
+package bean;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;

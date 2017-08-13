@@ -1,12 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: rico
-  Date: 6/13/17
-  Time: 2:25 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<jsp:useBean class = "uu.Register" id="register" scope="application"/>
+<jsp:useBean class = "bean.Register" id="register" scope="application"/>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -20,7 +13,7 @@
         String id = request.getParameter("id");
         String psw = request.getParameter("psw");
 
-        if(id.isEmpty()|| psw.isEmpty()) {
+        if(id.isEmpty() || psw.isEmpty()) {
             response.sendRedirect("register.jsp");
         }
     %>

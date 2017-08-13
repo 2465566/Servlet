@@ -1,15 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: rico
-  Date: 6/13/17
-  Time: 2:05 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <%--但是所有服务器都至少要发送一个：content-type:text/html。这将告诉浏览器准备接受一个 HTML 文档--%>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" />
     <title>BBS系统</title>
 </head>
 <body>

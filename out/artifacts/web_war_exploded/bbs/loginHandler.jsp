@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<jsp:useBean class="uu.Register" id="register" scope="application"/>
+<jsp:useBean class="bean.Register" id="register" scope="application"/>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -9,8 +9,7 @@
 <body>
 <center>
     <%
-        boolean flag = false;
-
+        boolean isValidUser = false;
         String id = request.getParameter("id");
         String password = request.getParameter("password");
 
@@ -18,25 +17,22 @@
             response.sendRedirect("login.jsp");
             return;
         }
-
     %>
-    
     <jsp:getProperty name="register" property="map"/>
     <jsp:getProperty name="register" property="id"/>
     <%
         for (int i = 0; i < register.getMap().size(); i++) {
             if (password.equals(register.getMap().get(id))) {
-                flag = true;
+                isValidUser = true;
             }
         }
     %>
     <%
-
-        if (flag) {
+        if (isValidUser) {
             session.setAttribute("id", id);
             session.setAttribute("psw", password);
     %>
-    <jsp:forward page="list_notes.jsp"/>
+    <jsp:forward page="notesList.jsp"/>
     <%
     } else {
     %>
